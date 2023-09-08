@@ -24,7 +24,7 @@ In order to view the inventory, navigate to `http://localhost:3000/graphiql` whi
 ```
 query {
   stores {
-		edges {
+    edges {
       node {
         id
         name
@@ -49,7 +49,7 @@ There is another query available intended to support decisions for migrating inv
 
 ```
 query {
-	inventoryByShoe(shoeModel: "ADERI") {
+  inventoryByShoe(shoeModel: "ADERI") {
     edges{
       node{
         store {
@@ -67,7 +67,8 @@ Finally, you can manually update the inventory of a given store/shoe with the fo
 ```
 mutation {
   updateInventory(input: {
-    storeName: "ALDO Centre Eaton", shoeName: "ADERI", quantity: 11})
+    storeName: "ALDO Centre Eaton", shoeName: "ADERI", quantity: 11
+  })
   {
     inventory {
       quantity
@@ -81,7 +82,8 @@ mutation {
 
 The database uses 4 tables to track inventory and sales. The `stores` and `shoes` table indicate the stores and shoe models available in the system. A join table `inventories` links each `store` to a `shoe` and has a `quantity` field expressing how many shoes of a given model are in a given store. Finally, the `transactions` table keeps track of changes to an inventory (useful for seeing sale data over time, and financial calculations if we included prices).
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/64fa9c5a02bd1c4a5e2fcb6f'> </iframe>
+See schema here:
+https://dbdiagram.io/d/64fa9c5a02bd1c4a5e2fcb6f
 
 ## Assumptions
 
