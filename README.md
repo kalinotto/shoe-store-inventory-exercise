@@ -4,7 +4,7 @@ This is a Rails/GraphQL backend to handle inventory management for the `shoe-sto
 
 ## Overview
 
-loom goes here
+https://www.loom.com/share/390c5011651243be8400c92cdce1ce99?sid=37af9e64-2716-45b0-8a20-bbbca90ab6b2
 
 ## Set-up
 
