@@ -91,4 +91,4 @@ Because of the way the messages are emitted, I made the following assumptions:
 
 - The first message for a given store/shoe combination initializes the inventory at that amount, and does not count as a sale
 - Following messages for a store/shoe combination indicates a sale equivalent to the difference in quantity
-  - eg: if the new amount is lower, we consider it a sale (logged in the `transaction` table as a negative quantity) and if the new amount is higher, we consider it a return (positive quantity in `transaction`)
+  - eg: if the new amount is lower, we consider it a sale (logged in the `transaction` table as a positive quantity) and if the new amount is higher, we consider it a return (negative quantity in `transaction`)
